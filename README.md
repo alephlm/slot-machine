@@ -12,7 +12,7 @@ ___
 
 - execute command: "npm i"
 
-- after previous commands end running, execute the command "spm start"
+- after previous commands end running, execute the command "npm start"
   the project should be accesible at http://localhost:8080/
 
 ___
