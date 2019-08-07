@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Slot Machine</title>
+</head>
+
+<body>
+    <div class="row balance-container">
+        <input id="balance" type="number" min="0">
+        
+        <button type="button" id="spin">SPIN</button>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+                <ul>
+                    <li class="list-group-item">3 CHERRY symbols on top line 2000</li>
+                    <li class="list-group-item">3 CHERRY symbols on center line 1000</li>
+                    <li class="list-group-item">3 CHERRY symbols on bottom line 4000</li>
+                    <li class="list-group-item">3 7 symbols on any line 150</li>
+                    <li class="list-group-item">Any combination of CHERRY and 7 on any line 75</li>
+                    <li class="list-group-item">3 3xBAR symbols on any line 50</li>
+                    <li class="list-group-item">3 2xBAR symbols on any line 20</li>
+                    <li class="list-group-item">3 BAR symbols on any line 10</li>
+                    <li class="list-group-item">Combination of any BAR symbols on any line 5</li>
+                </ul>
+                <input type="checkbox" id="debug">
+            <label for="debug">DEBUG</label>
+            <div class="col-md-12">
+                <div class="debug-area">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <select id="select00">
+                                <option value="BAR">BAR</option>
+                                <option value="2xBAR">2xBAR</option>
+                                <option value="3xBAR">3xBAR</option>
+                                <option value="Cherry">Cherry</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select id="select01">
+                                <option value="BAR">BAR</option>
+                                <option value="2xBAR">2xBAR</option>
+                                <option value="3xBAR">3xBAR</option>
+                                <option value="Cherry">Cherry</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select id="select02">
+                                <option value="BAR">BAR</option>
+                                <option value="2xBAR">2xBAR</option>
+                                <option value="3xBAR">3xBAR</option>
+                                <option value="Cherry">Cherry</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <select id="select10">
+                                <option value="BAR">BAR</option>
+                                <option value="2xBAR">2xBAR</option>
+                                <option value="3xBAR">3xBAR</option>
+                                <option value="Cherry">Cherry</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select id="select11">
+                                <option value="BAR">BAR</option>
+                                <option value="2xBAR">2xBAR</option>
+                                <option value="3xBAR">3xBAR</option>
+                                <option value="Cherry">Cherry</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select id="select12">
+                                <option value="BAR">BAR</option>
+                                <option value="2xBAR">2xBAR</option>
+                                <option value="3xBAR">3xBAR</option>
+                                <option value="Cherry">Cherry</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <select id="select20">
+                                <option value="BAR">BAR</option>
+                                <option value="2xBAR">2xBAR</option>
+                                <option value="3xBAR">3xBAR</option>
+                                <option value="Cherry">Cherry</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select id="select21">
+                                <option value="BAR">BAR</option>
+                                <option value="2xBAR">2xBAR</option>
+                                <option value="3xBAR">3xBAR</option>
+                                <option value="Cherry">Cherry</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select id="select22">
+                                <option value="BAR">BAR</option>
+                                <option value="2xBAR">2xBAR</option>
+                                <option value="3xBAR">3xBAR</option>
+                                <option value="Cherry">Cherry</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+
+            <div id="slot-machine">
+                <div class="row">
+                    <div class="col-md-1">
+                        <div class="slot-indicator" id="line-one">
+                            <svg  viewBox="0 0 44 44" width="100%" height="100%">
+                                <polygon points="0,0 40,20 0,40" style="fill:red;stroke-width:1" />
+                              </svg>
+                        </div>
+                        <div class="slot-indicator" id="line-two">
+                            <svg  viewBox="0 0 44 44" width="100%" height="100%">
+                                <polygon points="0,0 40,20 0,40" style="fill:red;stroke-width:1" />
+                              </svg>
+                        </div>
+                        <div class="slot-indicator" id="line-three">
+                            <svg  viewBox="0 0 44 44" width="100%" height="100%">
+                                <polygon points="0,0 40,20 0,40" style="fill:red;stroke-width:1" />
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-11">
+                        <div id="reels">
+                            <div class="reel"></div>
+                            <div class="reel"></div>
+                            <div class="reel"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
